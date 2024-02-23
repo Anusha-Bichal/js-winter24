@@ -29,7 +29,7 @@ const user = {
     this.phone[phoneType] = phoneNumber;
   },
   updateNewPhone: function (phoneType, newPhoneNumber) {
-    if (this.phone.hasOwnProperty(phoneType)) {
+    if (this.phone[phoneType] !== undefined) {
       this.phone[phoneType] = newPhoneNumber;
     }
   },
@@ -41,5 +41,5 @@ console.log(user.getEmail());
 console.log(user.addToCart("orange"));
 user.addNewPhone("work", "100-200-3000");
 console.log(user.getPhone("work"));
-user.updateNewPhone("cell", "999-000-7777");
+user.updateNewPhone("cell");
 console.log(user.phone);
