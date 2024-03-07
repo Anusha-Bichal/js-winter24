@@ -1,0 +1,22 @@
+Write a summary of how maps are implemented? Make sure to address:
+1. How do we compute the index from the key (string)?
+A: The map works on the hashing technique which takes the key,value pair to compute index.
+
+2. Why do we use the modulo operator % to get the hash index?
+A: We use modulo to ensure that the hash index is within the array size.
+
+3. What do we do with the hash index once we compute it?
+A: once the hash index is computed we store the key value pair in the array.
+
+4. What is the benefit of using a map over an array?
+A: Unlike arrays, maps take dynamic resizing and also stores various data types.
+
+5. What are the drawbacks or constraints of using a map versus an array to store information?
+A: In maps when the key returns same index which is already been used it leads to collision and also maps takes more memory than arrays.
+
+6. Implement a method has(key) for our MockMap data structure. The function should check if the key exists in the map or not. It should return true if the key exist and false if it doesn't.
+A: has(key){
+if(array[hashIndex]){
+return true;}
+else{
+return false;}
