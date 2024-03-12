@@ -76,3 +76,56 @@ class Car extends Vehicle {
 //const cr = new Car("Mazda", "Cx-8", "2024", "4");
 //console.log(vehcl.getInfo());
 //console.log(cr.getInfo());
+
+class Employee {
+  #name;
+  #id;
+  #email;
+
+  constructor(name, id, email) {
+    this.#name = name;
+    this.#id = id;
+    this.#email = email;
+  }
+  getInfor() {
+    return this.#name + " " + this.id + " " + this.email;
+  }
+  getEmail() {
+    return this.#email;
+  }
+}
+
+class CrewMember extends Employee {
+  #manager;
+
+  constructor(name, id, email, manager) {
+    super(name, id, email);
+    this.#manager = manager;
+  }
+  setManager(mangName) {
+    if (typeof mangName !== "string") return;
+    this.manager = mangName;
+  }
+  getManager() {
+    this.manager = this.manager;
+  }
+}
+
+class Manager extends Employee {
+  #subordinate = [];
+
+  constructor(name, id, email, subordinate) {
+    super(name, id, email);
+    this.#subordinate = subordinate;
+  }
+  add(employee) {
+    if (Employee.includes(employee)) {
+      this.#subordinate.push(employee);
+    }
+  }
+  remove(employee) {
+    const len = this.#subordinate.length(employee);
+    if (len !== -1) {
+    }
+  }
+}
